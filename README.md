@@ -28,7 +28,7 @@ config rule
 # Interacting or modifying the existing rules on /etc/config/firewall directly from shell with commands
 
 ```
-uci set firewall.@rule[13].enabled=1 && uci commit && /etc/init.d/firewall restart &>/dev/null && echo
+uci set firewall.@rule[13].enabled=1 && uci commit && /etc/init.d/firewall restart &>/dev/null
 
 ```
 ``firewall.@rule[13]`` points to the rule you want to change. You can list the rule ids that is 13 there, by using the command ``uci show firewall``. Keep in mind that every rules you put in the /etc/config/firewall has different numerical id in an ascending order. After that, there is ``.enabled=1``. This is the value we are changing and you have to put it based on what you want. 
