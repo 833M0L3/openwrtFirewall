@@ -6,7 +6,7 @@ opkg update
 opkg install ipset
 ```
 
-Rules you have to add in /etc/config/firewall to first assign a group of ip addresses to a ``option name``, which you can later use to apply certain rules to them
+Rules you have to add in /etc/config/firewall to first assign a group of ip addresses to a ``option name``, which you can later use to apply certain rules to them. You can notice the ``loadfile``. It loads the list of ip addresses from a file, which makes it super easy to manage users.
 ```
 config ipset
         option name 'test'
